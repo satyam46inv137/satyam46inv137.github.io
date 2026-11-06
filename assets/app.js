@@ -115,7 +115,7 @@
       }
       var subject = encodeURIComponent('Dispatch from ' + name);
       var body = encodeURIComponent(message + '\n\n— ' + name + '\n' + email);
-      window.location.href = 'mailto:hello@example.com?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:satyam.inv137@gmail.com?subject=' + subject + '&body=' + body;
 
       status.className = 'form-status is-visible is-ok';
       status.textContent = 'Opening your mail client…';
