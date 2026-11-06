@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Artifacts — SATYAM</title>
+<meta name="description" content="Projects and computational artifacts.">
+<meta name="theme-color" content="#030611">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23030611'/%3E%3Cpath d='M22 9a8 8 0 1 0 0 14 6 6 0 1 1 0-14z' fill='%23f4ba47'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="celestial-overlay" aria-hidden="true"></div>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="brand-crescent" aria-hidden="true">&#9789;</span><span class="brand-title">SATYAM</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="index.html">Nexus</a>
+      <a href="origin.html">Origin</a>
+      <a href="investigations.html">Investigations</a>
+      <a href="artifacts.html" class="is-active">Artifacts</a>
+      <a href="codex.html">Codex</a>
+      <a href="constellations.html">Constellations</a>
+      <a href="dispatch.html">Dispatch</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks"><span class="sr-only">Menu</span>☰</button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page-head">
+    <div class="section-label">03 · Artifacts</div>
+    <h1>Artifacts &amp; computational experiments.</h1>
+    <p class="lede">
+      Systems I have designed and built. Each entry states what it does,
+      what it taught me, and whether it is finished.
+    </p>
+  </div>
+
+  <div class="canvas-frame" style="padding-top:0">
+
+    <div class="filter-bar reveal" role="toolbar" aria-label="Project filter">
+      <button class="filter-btn is-on" data-filter="all" type="button">All</button>
+      <button class="filter-btn" data-filter="ml" type="button">Machine learning</button>
+      <button class="filter-btn" data-filter="physics" type="button">Physics</button>
+      <button class="filter-btn" data-filter="stats" type="button">Statistics</button>
+    </div>
+
+    <!-- ============================================================
+         PROJECT GRID
+         TODO: Replace each placeholder with a real artifact.
+         data-category must be space-separated: "ml physics"
+         ============================================================ -->
+    <div class="dossier-grid">
+
+      <article class="dossier-card is-placeholder reveal" data-category="ml">
+        <div class="dossier-top">
+          <span>[ARTIFACT 01]</span>
+          <span>IN PROGRESS</span>
+        </div>
+        <div class="dossier-heading">Your first artifact</div>
+        <p class="dossier-body">
+          What it does, why you built it, what you learned. Add a measurable
+          outcome — accuracy, latency, size, or a specific problem solved.
+        </p>
+        <div class="tag-list">
+          <span class="tag-node">Tech 1</span>
+          <span class="tag-node">Tech 2</span>
+        </div>
+        <p class="placeholder-note">Edit artifacts.html</p>
+      </article>
+
+      <article class="dossier-card is-placeholder reveal" data-category="physics">
+        <div class="dossier-top">
+          <span>[ARTIFACT 02]</span>
+          <span>IN PROGRESS</span>
+        </div>
+        <div class="dossier-heading">Second artifact</div>
+        <p class="dossier-body">
+          What it does, why you built it, what you learned. Prefer describing
+          one honest experiment over five polished demos.
+        </p>
+        <div class="tag-list">
+          <span class="tag-node">Tech 1</span>
+          <span class="tag-node">Tech 2</span>
+        </div>
+        <p class="placeholder-note">Edit artifacts.html</p>
+      </article>
+
+      <article class="dossier-card is-placeholder reveal" data-category="stats">
+        <div class="dossier-top">
+          <span>[ARTIFACT 03]</span>
+          <span>IN PROGRESS</span>
+        </div>
+        <div class="dossier-heading">Third artifact</div>
+        <p class="dossier-body">
+          What it does, why you built it, what you learned. State clearly
+          whether it is finished, ongoing, or abandoned.
+        </p>
+        <div class="tag-list">
+          <span class="tag-node">Tech 1</span>
+          <span class="tag-node">Tech 2</span>
+        </div>
+        <p class="placeholder-note">Edit artifacts.html</p>
+      </article>
+
+      <!--
+      ════════════════════════════════════════════════════════════
+      REAL ARTIFACT TEMPLATE
+      ════════════════════════════════════════════════════════════
+      <article class="dossier-card reveal" data-category="ml physics">
+        <div class="dossier-top">
+          <span>[ARTIFACT 01]</span>
+          <span>COMPLETED</span>
+        </div>
+        <div class="dossier-heading">Real Artifact Title</div>
+        <p class="dossier-body">
+          What it does, why you built it, what you learned. Include a
+          measurable result: "reduced latency from 400ms to 40ms",
+          "reached 94% accuracy on X benchmark", "used by N people".
+        </p>
+        <div class="tag-list">
+          <span class="tag-node">Python</span>
+          <span class="tag-node">PyTorch</span>
+        </div>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.4rem">
+          <a class="btn" href="https://github.com/...">GitHub</a>
+          <a class="btn" href="#">Demo</a>
+        </div>
+      </article>
+      -->
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <div style="font-family:var(--font-display);font-size:1rem;letter-spacing:3px;color:var(--starlight-pure);">SATYAM</div>
+      <p class="meta" style="margin-top:.5rem">Curiosity has no horizon.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="index.html">Nexus</a>
+      <a href="origin.html">Origin</a>
+      <a href="investigations.html">Investigations</a>
+      <a href="artifacts.html">Artifacts</a>
+      <a href="codex.html">Codex</a>
+      <a href="constellations.html">Constellations</a>
+      <a href="dispatch.html">Dispatch</a>
+    </nav>
+    <p class="meta">&copy; <span data-year>2026</span> Satyam</p>
+  </div>
+</footer>
+
+<div class="ambient-watermark" aria-hidden="true">ARCHIVAL HORIZON &bull; <span>सत्यम्</span> // 137</div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
