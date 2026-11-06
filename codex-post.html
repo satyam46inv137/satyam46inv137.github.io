@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Article template — SATYAM</title>
+<meta name="description" content="Template for a SATYAM codex entry.">
+<meta name="theme-color" content="#030611">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23030611'/%3E%3Cpath d='M22 9a8 8 0 1 0 0 14 6 6 0 1 1 0-14z' fill='%23f4ba47'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="celestial-overlay" aria-hidden="true"></div>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="brand-crescent" aria-hidden="true">&#9789;</span><span class="brand-title">SATYAM</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="index.html">Nexus</a>
+      <a href="origin.html">Origin</a>
+      <a href="investigations.html">Investigations</a>
+      <a href="artifacts.html">Artifacts</a>
+      <a href="codex.html" class="is-active">Codex</a>
+      <a href="constellations.html">Constellations</a>
+      <a href="dispatch.html">Dispatch</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks"><span class="sr-only">Menu</span>☰</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================================================
+       ARTICLE HEAD
+       Copy this file as codex-post-your-topic.html, then:
+       1. Update <title>, meta description, og tags
+       2. Change the category, date, read time
+       3. Change the H1
+       4. Change the lede
+       5. Replace the prose body
+       ============================================================ -->
+  <article>
+    <header class="article-head">
+      <a class="link-arrow" href="codex.html" style="margin-bottom:1rem">
+        <span aria-hidden="true">&larr;</span> All entries
+      </a>
+      <p class="meta" style="margin-top:1rem">Category &middot; Month YYYY &middot; X min read</p>
+      <h1 style="margin-top:.6rem">Your article title goes here</h1>
+      <p class="lede" style="margin-top:1.2rem">
+        A one- or two-sentence hook — the reader should know exactly why
+        they want to keep reading. Avoid vague openings.
+      </p>
+    </header>
+
+    <div style="max-width:820px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2rem) var(--s6)">
+      <hr class="rule" style="margin-bottom:var(--s5)">
+      <div class="prose reveal">
+        <p>
+          Your opening paragraph. Set up the problem in plain language.
+          One idea per paragraph. No filler.
+        </p>
+
+        <h2>A section heading</h2>
+        <p>Body text. Each section should advance the argument one step.</p>
+
+        <blockquote>
+          A pull-quote that captures the central claim of this section.
+        </blockquote>
+
+        <h3>A subsection</h3>
+        <p>For code, use:</p>
+        <pre><code>def example(x):
+    return x * 2</code></pre>
+        <p>
+          For inline code wrap in <code>backticks</code>. For emphasis use
+          <em>italics</em> or <strong>bold</strong>.
+        </p>
+
+        <ul>
+          <li>Bullet item one.</li>
+          <li>Bullet item two.</li>
+          <li>Bullet item three.</li>
+        </ul>
+
+        <h2>Another section</h2>
+        <p>
+          Continue. End with what you actually learned or what remains
+          open. Skip the summary paragraph unless it adds something.
+        </p>
+
+        <hr>
+        <p class="meta" style="text-transform:none;letter-spacing:.03em">
+          Corrections welcome — <a href="dispatch.html">send a dispatch</a>.
+        </p>
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <div style="font-family:var(--font-display);font-size:1rem;letter-spacing:3px;color:var(--starlight-pure);">SATYAM</div>
+      <p class="meta" style="margin-top:.5rem">Curiosity has no horizon.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="index.html">Nexus</a>
+      <a href="origin.html">Origin</a>
+      <a href="investigations.html">Investigations</a>
+      <a href="artifacts.html">Artifacts</a>
+      <a href="codex.html">Codex</a>
+      <a href="constellations.html">Constellations</a>
+      <a href="dispatch.html">Dispatch</a>
+    </nav>
+    <p class="meta">&copy; <span data-year>2026</span> Satyam</p>
+  </div>
+</footer>
+
+<div class="ambient-watermark" aria-hidden="true">ARCHIVAL HORIZON &bull; <span>सत्यम्</span> // 137</div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
