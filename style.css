@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --abyss: #070709;
-  --surface: #0e0e12;
-  --surface-hover: #13141a;
-  --line: rgba(255, 255, 255, 0.07);
-  --line-focus: rgba(255, 255, 255, 0.2);
-  --ink-primary: #eae9e5;
-  --ink-secondary: #8c8b94;
-  --ink-ghost: #3a3942;
-  --gold-dust: #b8976b;
+  --abyss: #060709;
+  --surface: #0c0d11;
+  --surface-hover: #111319;
+  --line: rgba(255, 255, 255, 0.055);
+  --line-focus: rgba(255, 255, 255, 0.16);
+  --ink-primary: #ededeb;
+  --ink-secondary: #868892;
+  --ink-ghost: #343740;
+  --moon-dust: #d6cfc2; /* pale lunar parchment */
   --font-editorial: 'Cormorant Garamond', Georgia, serif;
   --font-technical: 'Space Mono', monospace;
 }
@@ -32,7 +32,7 @@ body {
   letter-spacing: -0.2px;
 }
 
-/* Subtle Cinematic Film Grain (Analog feel) */
+/* Subtle Film Grain Noise */
 body::before {
   content: "";
   position: fixed;
@@ -44,25 +44,25 @@ body::before {
   z-index: 100;
 }
 
-/* Atmospheric Vignette & Deep Shadows */
+/* Atmospheric Radial Shadows */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at 50% 10%, rgba(26, 26, 38, 0.25) 0%, transparent 60%),
-              radial-gradient(circle at 90% 90%, rgba(18, 15, 25, 0.3) 0%, transparent 50%);
+  background: radial-gradient(circle at 50% 12%, rgba(28, 30, 42, 0.22) 0%, transparent 60%),
+              radial-gradient(circle at 90% 90%, rgba(16, 14, 24, 0.35) 0%, transparent 50%);
   z-index: -1;
   pointer-events: none;
 }
 
-/* Header & Nav */
+/* Navigation */
 nav {
   border-bottom: 1px solid var(--line);
   padding: 1.6rem 12%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(7, 7, 9, 0.85);
+  background: rgba(6, 7, 9, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   position: sticky;
@@ -81,8 +81,8 @@ nav {
 
 .logo span {
   font-family: var(--font-technical);
-  font-size: 0.75rem;
-  color: var(--gold-dust);
+  font-size: 0.72rem;
+  color: var(--moon-dust);
   margin-left: 6px;
   letter-spacing: 0px;
 }
@@ -100,18 +100,18 @@ nav {
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--ink-primary);
-  border-bottom: 1px solid var(--gold-dust);
+  border-bottom: 1px solid var(--moon-dust);
   padding-bottom: 3px;
 }
 
-/* Main Container */
+/* Container */
 .container {
   max-width: 820px;
   margin: 0 auto;
   padding: 5rem 1.8rem 7rem;
 }
 
-/* Surreal Hero Plate */
+/* Hero Exhibit Plate with Hairline Precision Crosses */
 .exhibit-plate {
   border: 1px solid var(--line);
   background: var(--surface);
@@ -120,19 +120,39 @@ nav {
   margin-bottom: 4rem;
 }
 
+.exhibit-plate::before {
+  content: "+";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  color: var(--ink-ghost);
+  font-size: 10px;
+  line-height: 1;
+}
+
+.exhibit-plate::after {
+  content: "+";
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  color: var(--ink-ghost);
+  font-size: 10px;
+  line-height: 1;
+}
+
 .plate-mark {
   position: absolute;
-  top: 1rem;
+  top: 1.2rem;
   right: 1.4rem;
-  font-size: 10px;
+  font-size: 9.5px;
   letter-spacing: 2px;
   color: var(--ink-ghost);
 }
 
 .exhibit-label {
-  font-size: 10.5px;
-  color: var(--gold-dust);
-  letter-spacing: 2px;
+  font-size: 10px;
+  color: var(--moon-dust);
+  letter-spacing: 2.5px;
   text-transform: uppercase;
   margin-bottom: 1.2rem;
 }
@@ -141,8 +161,8 @@ h1 {
   font-family: var(--font-editorial);
   font-size: 3rem;
   font-weight: 300;
-  letter-spacing: 1px;
-  line-height: 1.1;
+  letter-spacing: 0.5px;
+  line-height: 1.15;
   color: #fff;
   margin-bottom: 1.2rem;
 }
@@ -155,11 +175,11 @@ h1 em {
 
 .curator-note {
   font-family: var(--font-editorial);
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   line-height: 1.7;
-  color: #b3b2b8;
-  margin-bottom: 1.8rem;
-  max-width: 650px;
+  color: #b7b6bd;
+  margin-bottom: 2rem;
+  max-width: 660px;
 }
 
 .plate-footer {
@@ -168,15 +188,16 @@ h1 em {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 11px;
+  font-size: 10.5px;
   color: var(--ink-secondary);
+  letter-spacing: 0.5px;
 }
 
 .plate-footer span {
   color: var(--ink-ghost);
 }
 
-/* Section Header */
+/* Gallery Index Header */
 .gallery-index {
   display: flex;
   align-items: baseline;
@@ -194,7 +215,7 @@ h1 em {
 }
 
 .index-count {
-  font-size: 10px;
+  font-size: 9.5px;
   letter-spacing: 2px;
   color: var(--ink-ghost);
 }
@@ -218,25 +239,25 @@ h1 em {
 .artifact-meta {
   display: flex;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: 9.5px;
   color: var(--ink-ghost);
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   margin-bottom: 0.6rem;
 }
 
 .artifact-name {
   font-family: var(--font-editorial);
-  font-size: 1.6rem;
+  font-size: 1.65rem;
   font-weight: 400;
   color: #fff;
   margin-bottom: 0.5rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 .artifact-synopsis {
   color: var(--ink-secondary);
   font-size: 12px;
-  line-height: 1.7;
+  line-height: 1.75;
   margin-bottom: 1.2rem;
 }
 
@@ -250,22 +271,35 @@ h1 em {
 .material-tag {
   font-size: 10px;
   color: var(--ink-secondary);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--line);
   padding: 2px 8px;
   letter-spacing: 0.5px;
 }
 
 .artifact-action a {
-  color: var(--gold-dust);
+  color: var(--moon-dust);
   text-decoration: none;
   font-size: 11px;
   letter-spacing: 1px;
   display: inline-flex;
   align-items: center;
-  transition: gap 0.2s;
+  transition: color 0.2s;
 }
 
 .artifact-action a:hover {
   color: #fff;
+}
+
+/* Fixed Ghost Coordinate Watermark */
+.fixed-watermark {
+  position: fixed;
+  bottom: 1.2rem;
+  right: 1.6rem;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--ink-ghost);
+  pointer-events: none;
+  z-index: 80;
+  font-family: var(--font-technical);
 }
